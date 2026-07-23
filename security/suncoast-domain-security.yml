@@ -1,0 +1,43 @@
+generated: '2026-07-23'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml hosts (both brand domains)
+hosts:
+- host: www.suncoast.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 28 00:35:43 2026 GMT
+  hsts: null
+  hsts_max_age: null
+  note: >-
+    Canonical brand domain (Cloudflare-fronted). Returns HTTP 403 to non-browser
+    clients (bot protection), so HSTS/response headers could not be read.
+    www.suncoastcreditunion.com issues a 301 redirect here.
+- host: www.suncoastcreditunion.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 24 21:01:13 2026 GMT
+  hsts: true
+  hsts_max_age: 63072000
+  note: Legacy domain; 301-redirects to www.suncoast.com.
+domains:
+- domain: suncoast.com
+  dnssec: false
+  caa: []
+  spf: true
+  spf_record: >-
+    v=spf1 include:spf.protection.outlook.com include:_phishspf.knowbe4.com
+    include:sendgrid.net ip4:198.51.245.68 ip4:65.89.183.150 -all
+  dmarc: true
+  dmarc_policy: reject
+- domain: suncoastcreditunion.com
+  dnssec: true
+  caa:
+  - 0 issuewild "pki.goog"
+  - 0 issue "digicert.com"
+  - 0 issue "globalsign.com"
+  - 0 issue "pki.goog"
+  - 0 issuewild "digicert.com"
+  - 0 issuewild "globalsign.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

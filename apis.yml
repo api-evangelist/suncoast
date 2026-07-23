@@ -9,9 +9,11 @@ description: >-
   the largest credit union in Florida and one of the largest in the United
   States, serving well over a million members across Florida counties with
   more than $17 billion in assets. It offers consumer and small-business
-  deposit accounts, lending, cards, and digital banking through a Sitecore
-  web presence and an online/mobile banking platform hosted on
-  banking.suncoastcreditunion.com. As is typical for a U.S. credit union,
+  deposit accounts, lending, cards, and digital banking through a
+  web presence (the brand's canonical domain is now suncoast.com, with the
+  legacy suncoastcreditunion.com 301-redirecting to it) and an online/mobile
+  banking platform hosted on banking.suncoastcreditunion.com. As is typical
+  for a U.S. credit union,
   Suncoast publishes NO first-party public developer API and operates no
   developer portal: no developer or api subdomain resolves for either
   suncoastcreditunion.com or suncoast.com. Consumer-permissioned data access
@@ -35,8 +37,10 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/suncoast-domain-security.yml
 - type: Website
-  url: https://www.suncoastcreditunion.com/
+  url: https://www.suncoast.com/
 - type: LinkedIn
   url: https://www.linkedin.com/company/suncoastcreditunion/
 - type: SignIn
