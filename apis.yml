@@ -1,0 +1,46 @@
+aid: suncoast
+url: https://raw.githubusercontent.com/api-evangelist/suncoast/refs/heads/main/apis.yml
+name: Suncoast Credit Union
+kind: company
+description: >-
+  Suncoast Credit Union is a state-chartered, federally insured (NCUA),
+  member-owned not-for-profit financial cooperative headquartered in Tampa,
+  Florida. Founded in 1934 as Hillsborough County Teachers Credit Union, it is
+  the largest credit union in Florida and one of the largest in the United
+  States, serving well over a million members across Florida counties with
+  more than $17 billion in assets. It offers consumer and small-business
+  deposit accounts, lending, cards, and digital banking through a Sitecore
+  web presence and an online/mobile banking platform hosted on
+  banking.suncoastcreditunion.com. As is typical for a U.S. credit union,
+  Suncoast publishes NO first-party public developer API and operates no
+  developer portal: no developer or api subdomain resolves for either
+  suncoastcreditunion.com or suncoast.com. Consumer-permissioned data access
+  is available only through third-party aggregators (Plaid, MX, Finicity,
+  Akoya) and its digital-banking core provider rather than a direct API.
+  There is no publicly documented Financial Data Exchange (FDX) participation
+  and no published CFPB Section 1033 open-banking posture. This is an
+  identity-only API Evangelist record reflecting an honest "no public API,
+  aggregator-only" reality.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- United States
+- Credit Union
+- Florida
+- Open Finance
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.suncoastcreditunion.com/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/suncoastcreditunion/
+- type: SignIn
+  url: https://banking.suncoastcreditunion.com/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

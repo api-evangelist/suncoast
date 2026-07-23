@@ -1,0 +1,93 @@
+aid: suncoast
+name: Suncoast Credit Union
+review:
+  question: Does Suncoast Credit Union expose a documented public first-party developer API?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Suncoast Credit Union publishes no first-party public developer API and
+    operates no developer portal. It is a state-chartered, NCUA-insured,
+    member-owned not-for-profit credit union in Tampa, Florida — the largest
+    credit union in Florida — whose public web presence (a Sitecore/Next.js
+    marketing site canonicalized to suncoast.com) and hosted online/mobile
+    banking platform at banking.suncoastcreditunion.com carry no "Developers"
+    or "API" surface. Direct probing confirmed no developer or API host
+    exists: developer.suncoastcreditunion.com, api.suncoastcreditunion.com,
+    developer.suncoast.com, and api.suncoast.com all fail to connect
+    (curl exit / HTTP 000, no usable DNS answer). No downloadable
+    OpenAPI/Swagger, no API reference, and no authentication documentation
+    (OAuth2/OIDC/API-key/mTLS) are published. As is typical for a U.S. credit
+    union, consumer-permissioned data access is available only indirectly via
+    third-party aggregators (Plaid, MX, Finicity, Akoya) and the institution's
+    digital-banking core provider — not a first-party API. No Financial Data
+    Exchange (FDX) participation is publicly documented and no CFPB Section
+    1033 (Personal Financial Data Rights) posture is published. This is an
+    honest identity-only record: no public API, aggregator-only.
+  openFinancePosture:
+    firstPartyDeveloperPortal: false
+    developerPortalURL: ''
+    downloadableOpenAPI: false
+    fdxParticipant: false
+    section1033PosturePublished: false
+    aggregatorOnly: true
+    aggregatorsNoted:
+      - Plaid
+      - MX
+      - Finicity
+      - Akoya
+    authModel: none-documented
+    specProvenance: none
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public first-party REST API is documented. banking.suncoastcreditunion.com is an end-user online-banking application, not a documented API.
+    - protocol: GraphQL
+      documented: false
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+  probes:
+    - url: https://developer.suncoastcreditunion.com
+      status: 000
+      note: Does not connect / no developer host.
+    - url: https://api.suncoastcreditunion.com
+      status: 000
+      note: Does not connect / no API host.
+    - url: https://developer.suncoast.com
+      status: 000
+      note: Does not connect / no developer host.
+    - url: https://api.suncoast.com
+      status: 000
+      note: Does not connect / no API host.
+    - url: https://www.suncoastcreditunion.com/
+      status: 403
+      note: Live marketing site behind Cloudflare WAF (blocks automated agents); no developer/API section present in rendered navigation.
+    - url: https://www.linkedin.com/company/suncoastcreditunion/
+      status: 200
+      note: Verified official LinkedIn company page.
+    - url: https://github.com/suncoastcreditunion
+      status: 404
+      note: No GitHub organization.
+    - url: https://banking.suncoastcreditunion.com/
+      status: referenced
+      note: Online/mobile banking login host referenced from the primary site; an end-user application, not a documented public API.
+sources:
+  - url: https://www.suncoastcreditunion.com/
+    type: Website
+    note: Primary marketing site (Sitecore/Next.js), canonical domain suncoast.com; routing number 263182817; no developer or API surface.
+  - url: https://www.linkedin.com/company/suncoastcreditunion/
+    type: LinkedIn
+    note: Official company profile.
+actions:
+  apisYmlUpdated: true
+  openapiHarvested: false
+  reason: |
+    No public first-party API surface exists to harvest. No first-party
+    developer portal, no downloadable OpenAPI/Swagger, no documented FDX or
+    Section 1033 data-access API. The record is identity-only, reflecting an
+    honest "no public API, aggregator-only" posture for a credit union whose
+    open-finance access is mediated entirely by aggregators and its
+    digital-banking core provider.
