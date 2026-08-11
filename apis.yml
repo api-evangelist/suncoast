@@ -37,6 +37,10 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: Blog
+  url: https://www.suncoast.com/Blog
+- type: PrivacyPolicy
+  url: https://www.suncoast.com/Privacy-Policy
 - type: DomainSecurity
   url: security/suncoast-domain-security.yml
 - type: Website
