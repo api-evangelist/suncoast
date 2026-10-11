@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "suncoast",
+    "captured_at": "2026-10-11T193104",
+    "source_url": "https://www.suncoast.com/",
+    "source_type": "Website",
+    "file": "suncoast-2026-10-11T193104.png",
+    "bytes": 345493,
+    "capture": "playwright-local"
+  }
+]
