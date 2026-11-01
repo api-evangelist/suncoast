@@ -1,4 +1,4 @@
-# Suncoast Credit Union (suncoast)
+# Suncoast Credit Union
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,48 +64,81 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Suncoast Credit Union is a state-chartered, federally insured (NCUA), member-owned not-for-profit financial cooperative headquartered in Tampa, Florida. Founded in 1934, it is the largest credit union in Florida and one of the largest in the United States, serving well over a million members with more than $17 billion in assets. It offers consumer and small-business deposit accounts, lending, cards, and digital banking.
+Suncoast Credit Union is a state-chartered, federally insured (NCUA), member-owned not-for-profit financial cooperative headquartered in Tampa, Florida. Founded in 1934 as Hillsborough County Teachers Credit Union, it is the largest credit union in Florida and one of the largest in the United States, serving well over a million members across Florida counties with more than $17 billion in assets. It offers consumer and small-business deposit accounts, lending, cards, and digital banking through a web presence (the brand's canonical domain is now suncoast.com, with the legacy suncoastcreditunion.com 301-redirecting to it) and an online/mobile banking platform hosted on banking.suncoastcreditunion.com. As is typical for a U.S. credit union, Suncoast publishes NO first-party public developer API and operates no developer portal: no developer or api subdomain resolves for either suncoastcreditunion.com or suncoast.com. Consumer-permissioned data access is available only through third-party aggregators (Plaid, MX, Finicity, Akoya) and its digital-banking core provider rather than a direct API. There is no publicly documented Financial Data Exchange (FDX) participation and no published CFPB Section 1033 open-banking posture. This is an identity-only API Evangelist record reflecting an honest "no public API, aggregator-only" reality.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/suncoast/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/suncoast/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · United States · Credit Union · Florida · Open Finance
 
-## Open-Finance / API Posture
+## Suncoast Credit Union on APIs.io
 
-Suncoast Credit Union publishes **no first-party public developer API** and operates **no developer portal**. Probing confirmed that neither `developer.` nor `api.` subdomains resolve for `suncoastcreditunion.com` or `suncoast.com`, and there is no "Developers" or "API" surface on the marketing site. Digital banking runs on a hosted online/mobile platform at `banking.suncoastcreditunion.com`.
+Everything profiled for Suncoast Credit Union is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/suncoast/](https://apis.io/providers/suncoast/)** — or go straight to one of the APIs or properties below.
 
-Consistent with most U.S. credit unions, consumer-permissioned data sharing is available only indirectly:
+### Published properties
 
-- **Aggregator access** — account data is reachable through third-party aggregators (Plaid, MX, Finicity, Akoya) and the institution's digital-banking core provider, not a direct first-party API.
-- **FDX (Financial Data Exchange)** — no publicly documented FDX participation.
-- **CFPB Section 1033** — no published open-banking / personal-financial-data-rights posture.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-This is an honest identity-only record: **no public API, aggregator-only.**
+#### Security (1)
 
-## Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Financial Services
-- Banking
-- United States
-- Credit Union
-- Florida
-- Open Finance
-- Data Aggregation
+- [Suncoast Domain Security](https://apis.io/security/suncoast/suncoast-domain-security/)
 
-## Timestamps
+## Where to find this API
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-## APIs
+- [Website](https://www.suncoast.com/)
+- [Blog](https://www.suncoast.com/Blog)
+- [Privacy policy](https://www.suncoast.com/Privacy-Policy)
 
-None. Suncoast Credit Union exposes no public first-party API.
+## API Evangelist rating
 
-## Common Properties
+**Kin Score 2.5** — minimal · rubric 0.24.0 · scored 2026-10-17
 
-- [Website](https://www.suncoastcreditunion.com/)
-- [LinkedIn](https://www.linkedin.com/company/suncoastcreditunion/)
-- [Online Banking Sign In](https://banking.suncoastcreditunion.com/)
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
 
-## Maintainers
+**Agent readiness 0.0** — human-only
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/suncoast/](https://apis.io/providers/suncoast/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Suncoast Credit Union: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/suncoast/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
